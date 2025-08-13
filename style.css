@@ -20,11 +20,12 @@ body {
     left: 5vw;
     width: 90vw;
     height: 90vh;
-    background-image: url('assets/bg.gif');
+    background-image: url('assets/buttonbg/bg.gif');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    outline: 3px solid white;
     transform: translateY(-50%);
     transition: width 0.5s ease, left 0.5s ease;
     display: flex;
@@ -67,8 +68,9 @@ body {
     left: 100vw;
     width: 55vw;
     height: 25vh;
-    background: white;
-    color: #222;
+    background-image: url('assets/buttonbg/a.png');
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-50%);
@@ -76,6 +78,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.aboutme:hover {
+    transform: translateY(-50%) scale(1.05);
+    filter: brightness(1.2);
+    background-image: url('assets/buttonbg/a.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .projects {
@@ -84,8 +99,9 @@ body {
     left: 100vw;
     width: 55vw;
     height: 25vh;
-    background: white;
-    color: #222;
+    background-image: url('assets/buttonbg/b.png');
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-50%);
@@ -93,6 +109,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.projects:hover {
+    transform: translateY(-50%) scale(1.05);
+    filter: brightness(1.2);
+    background-image: url('assets/buttonbg/b.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .contact {
@@ -101,8 +130,9 @@ body {
     left: 100vw;
     width: 55vw;
     height: 25vh;
-    background: white;
-    color: #222;
+    background-image: url('assets/buttonbg/c.png');
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-50%);
@@ -110,6 +140,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.contact:hover {
+    transform: translateY(-50%) scale(1.05);
+    filter: brightness(1.2);
+    background-image: url('assets/buttonbg/c.png');
+    background-size: cover;
+    background-position: center;
 }
 
 button {
