@@ -155,6 +155,30 @@ body {
     background-position: center;
 }
 
+.back {
+    position: absolute;
+    top: -10vh;
+    left: 40vw;
+    width: 55vw;
+    height: 12.5vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    transition: width 0.5s ease, left 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.back:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
 button {
     position: absolute;
     bottom: 10vh;
