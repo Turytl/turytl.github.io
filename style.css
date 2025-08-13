@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
 html,
 body {
     margin: 0;
@@ -58,6 +59,57 @@ body {
     font-size: 1.5em;
     text-align: center;
     color: white;
+}
+
+.aboutme {
+    position: absolute;
+    top: 20vh;
+    left: 100vw;
+    width: 55vw;
+    height: 25vh;
+    background: white;
+    color: #222;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    transition: width 0.5s ease, left 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    position: absolute;
+    top: 50vh;
+    left: 100vw;
+    width: 55vw;
+    height: 25vh;
+    background: white;
+    color: #222;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    transition: width 0.5s ease, left 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    position: absolute;
+    top: 80vh;
+    left: 100vw;
+    width: 55vw;
+    height: 25vh;
+    background: white;
+    color: #222;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    transition: width 0.5s ease, left 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
