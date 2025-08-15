@@ -1,204 +1,175 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .background-container {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, #222, #555);
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #111, #555);
+  position: relative;
 }
 
 .rectangle {
-    position: absolute;
-    top: 50%;
-    left: 5vw;
-    width: 90vw;
-    height: 90vh;
-    background-image: url('assets/buttonbg/bg.gif');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    outline: 3px solid white;
-    transform: translateY(-50%);
-    transition: width 0.5s ease, left 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  top: 50%;
+  left: clamp(2%, 5%, 8%);
+  width: clamp(80%, 90%, 95%);
+  height: clamp(80%, 90%, 95%);
+  background: url('assets/buttonbg/bg.gif') center/cover;
+  border-radius: clamp(10px, 2%, 20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  outline: clamp(2px, 0.3%, 3px) solid white;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
 }
 
 .center-square {
-    width: 45%;
-    height: 45%;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: width 0.5s ease, height 0.5s ease;
+  position: absolute;
+  width: clamp(30%, 50%, 60%);
+  height: clamp(30%, 50%, 60%);
+  top: 50%;
+  left: 50%;
+  background: rgba(0,0,0,0.3);
+  transform: translate(-50%, -50%);
+  border-radius: clamp(10px, 2%, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1;
 }
 
 .center-square .pfp {
-    width: 25%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1em;
+  width: clamp(25%, 35%, 45%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: clamp(0.5em, 1em, 1.5em);
 }
 
 .center-square .portfolio-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
+  font: 700 clamp(1rem, 2vw, 2rem) 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
 }
 
-.aboutme {
-    position: absolute;
-    top: 20vh;
-    left: 100vw;
-    width: 55vw;
-    height: 25vh;
-    background-image: url('assets/buttonbg/a.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-50%);
-    transition: width 0.5s ease, left 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
+.panel {
+  position: absolute;
+  left: clamp(100%, 110%, 120%);
+  width: clamp(45%, 55%, 65%);
+  height: clamp(20%, 25%, 30%);
+  border-radius: clamp(10px, 2%, 20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 700 clamp(1rem, 1.2vw, 2rem) 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
 }
 
-.aboutme:hover {
-    transform: translateY(-50%) scale(1.05);
-    filter: brightness(1.2);
-    background-image: url('assets/buttonbg/a.png');
-    background-size: cover;
-    background-position: center;
+.panel:hover {
+  transform: translateY(-50%) scale(1.05);
+  filter: brightness(1.2);
 }
 
-.projects {
-    position: absolute;
-    top: 50vh;
-    left: 100vw;
-    width: 55vw;
-    height: 25vh;
-    background-image: url('assets/buttonbg/b.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-50%);
-    transition: width 0.5s ease, left 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
+.aboutme, .projects, .contact {
+  position: absolute;
+  left: clamp(5%, 7.5%, 10%);
+  width: clamp(20%, 25%, 30%);
+  height: clamp(10%, 12.5%, 15%);
+  border-radius: clamp(10px, 2%, 20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
 
-.projects:hover {
-    transform: translateY(-50%) scale(1.05);
-    filter: brightness(1.2);
-    background-image: url('assets/buttonbg/b.png');
-    background-size: cover;
-    background-position: center;
+.aboutme { 
+  top: clamp(100%, 107.5%, 115%);
+  background-image: url('assets/buttonbg/a.png'); 
 }
 
-.contact {
-    position: absolute;
-    top: 80vh;
-    left: 100vw;
-    width: 55vw;
-    height: 25vh;
-    background-image: url('assets/buttonbg/c.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-50%);
-    transition: width 0.5s ease, left 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
+.projects { 
+  top: clamp(100%, 107.5%, 115%);
+  background-image: url('assets/buttonbg/b.png'); 
 }
 
-.contact:hover {
-    transform: translateY(-50%) scale(1.05);
-    filter: brightness(1.2);
-    background-image: url('assets/buttonbg/c.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.back {
-    position: absolute;
-    top: -10vh;
-    left: 40vw;
-    width: 55vw;
-    height: 12.5vh;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-50%);
-    transition: width 0.5s ease, left 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
-}
-
-.back:hover {
-    transform: translateY(-50%) scale(1.05);
+.contact { 
+  top: clamp(100%, 107.5%, 115%);
+  background-image: url('assets/buttonbg/c.png'); 
 }
 
 button {
-    position: absolute;
-    bottom: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1em 2em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.2vw;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid #fff;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
+  position: absolute;
+  bottom: clamp(10%, 15%, 20%);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: clamp(0.8em, 1em, 1.2em) clamp(1.5em, 2em, 2.5em);
+  font: 700 clamp(0.8rem, 1.2vw, 1.5rem) 'Montserrat', sans-serif;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #fff;
+  border-radius: clamp(15px, 2%, 25px);
+  cursor: pointer;
+  z-index: 10;
 }
 
 button:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #E0E0E0;
-    transform: translateX(-50%) scale(1.05);
+  background: rgba(255,255,255,0.1);
+  border-color: #E0E0E0;
+  transform: translateX(-50%) scale(1.05);
+}
+
+.aboutmeBox, .projectsBox, .contactBox {
+  position: absolute;
+  top: 50%;
+  left: clamp(100%, 110%, 120%);
+  width: clamp(45%, 55%, 65%);
+  height: clamp(80%, 90%, 100%);
+  border-radius: clamp(10px, 2%, 20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  outline: clamp(2px, 0.3%, 3px) solid white;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutmeBox { background-color: red; }
+.projectsBox { background-color: green; }
+.contactBox { background-color: blue; }
+
+/* CSS */
+.active .rectangle {
+  width: 30%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("assets/buttonbg/bg.gif") center/cover;
+}
+
+.active .center-square {
+  width: 30%;
+  height: 40%;
+  left: 20%;
+  top: 30%;
+  background: rgba(0,0,0,0);
+  box-shadow: none;
+}
+
+.active .panel.aboutme { top: 55%; }
+.active .panel.projects { top: 70%; }
+.active .panel.contact { top: 85%; }
+
+.rectangle, .center-square, .panel {
+  transition: all 0.5s ease;
 }

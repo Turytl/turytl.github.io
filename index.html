@@ -14,27 +14,29 @@
 
 <body>
     <div class="background-container">
-        <div class="rectangle" id="rectangle">
-            <button id="cutButton">Click To Explore</button>
-            <div class="center-square">
-                <img src="assets/pfp.png" alt="Profile Picture" class="pfp">
-                <h1 class="portfolio-title">Rehan Bharwani<br>Portfolio</h1>
-            </div>
+
+        <!-- Center Profile Square -->
+        <div class="center-square">
+            <img src="assets/pfp.png" alt="Profile Picture" class="pfp" loading="lazy">
+            <h1 class="portfolio-title">Rehan Bharwani<br>Portfolio</h1>
         </div>
 
-        <button class="aboutme">
-            <h1>About Me</h1>
-        </button>
-        <button class="projects">
-            <h1>Projects</h1>
-        </button>
-        <button class="contact">
-            <h1>Contact</h1>
-        </button>
+        <!-- Main Rectangle with Button -->
+        <div class="rectangle" id="rectangle">
+            <button id="cutButton">Click To Explore</button>
+        </div>
 
-        <button class="back">
-            <h1>Back</h1>
-        </button>
+        <!-- Panels Container -->
+        <div class="panels-container">
+            <div class="panel aboutme" role="button" tabindex="0">About Me</div>
+            <div class="panel projects" role="button" tabindex="0">Projects</div>
+            <div class="panel contact" role="button" tabindex="0">Contact</div>
+        </div>
+
+        <!-- Hidden Boxes -->
+        <div class="aboutmeBox" role="region" aria-label="About Me">about me</div>
+        <div class="projectsBox" role="region" aria-label="Projects">projects</div>
+        <div class="contactBox" role="region" aria-label="Contact">contact</div>
 
     </div>
 
