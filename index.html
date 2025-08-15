@@ -31,13 +31,32 @@
         <div class="panels-container">
             <div class="panel aboutme" role="button" tabindex="0">About Me</div>
             <div class="panel projects" role="button" tabindex="0">Projects</div>
-            <div class="panel contact" role="button" tabindex="0">Contact</div>
+            <div class="panel contact" role="button" tabindex="0">Contact Me</div>
         </div>
 
         <!-- Hidden Boxes -->
-        <div class="aboutmeBox" role="region" aria-label="About Me">about me</div>
-        <div class="projectsBox" role="region" aria-label="Projects">projects</div>
-        <div class="contactBox" role="region" aria-label="Contact">contact</div>
+        <div class="aboutmeBox" role="region" aria-label="About Me">
+            <h1 class="aboutme-title">About Me</h1>
+            <p class="aboutme-description">This is the about me section.</p>
+
+        </div>
+        <div class="projectsBox" role="region" aria-label="Projects">
+            <h1 class="projects-title">Projects</h1>
+
+            <div class="slider-container">
+                <div class="slide"><div class="panel-project" style="background:#222;">Project 1</div></div>
+                <div class="slide"><div class="panel-project" style="background:#222;">Project 2</div></div>
+                <div class="slide"><div class="panel-project" style="background:#222;">Project 3</div></div>
+            </div>
+
+            <button class="arrow arrow-left">&#10094;</button>
+            <button class="arrow arrow-right">&#10095;</button>
+            <div class="dots"></div>
+        </div>
+        <div class="contactBox" role="region" aria-label="Contact">
+            <h1 class="contact-title">Contact Me</h1>
+            <p class="contact-description">This is the contact section.</p>
+        </div>
 
     </div>
 

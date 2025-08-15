@@ -32,6 +32,45 @@ panels.aboutme.btn.addEventListener('click', () => showPanel('aboutme'));
 panels.projects.btn.addEventListener('click', () => showPanel('projects'));
 panels.contact.btn.addEventListener('click', () => showPanel('contact'));
 
+const projectsBox = document.querySelector('.projectsBox');
+const container = projectsBox.querySelector('.slider-container');
+const dotsContainer = projectsBox.querySelector('.dots');
+const slides = projectsBox.querySelectorAll('.slide');
+let index = 0;
+
+const prevBtn = projectsBox.querySelector('.arrow-left');
+const nextBtn = projectsBox.querySelector('.arrow-right');
+
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateScroll();
+});
+
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateScroll();
+});
+
+// Create dots
+slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => {
+        index = i;
+        updateScroll();
+    });
+    dotsContainer.appendChild(dot);
+});
+
+function updateScroll() {
+    container.scrollTo({
+        left: index * container.clientWidth,
+        behavior: 'smooth'
+    });
+
+    const dots = dotsContainer.querySelectorAll('.dot'); // scoped inside this slider
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+}
 
 // Particle JS
 
