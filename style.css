@@ -9,7 +9,7 @@ html, body {
 .background-container {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #111, #555);
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e, #1c1c3c);
   position: relative;
 }
 
@@ -32,8 +32,8 @@ html, body {
 
 .center-square {
   position: absolute;
-  width: clamp(30%, 50%, 60%);
-  height: clamp(30%, 50%, 60%);
+  width: clamp(30%, 40%, 40%);
+  height: clamp(30%, 40%, 40%);
   top: 50%;
   left: 50%;
   background: rgba(0,0,0,0.3);
@@ -48,7 +48,7 @@ html, body {
 }
 
 .center-square .pfp {
-  width: clamp(25%, 35%, 45%);
+  width: clamp(25%, 30%, 35%);
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
@@ -74,6 +74,7 @@ html, body {
   align-items: center;
   font: 700 clamp(1rem, 1.2vw, 2rem) 'Montserrat', sans-serif;
   text-align: center;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
   color: white;
   background-size: cover;
   background-position: center;
@@ -113,7 +114,7 @@ html, body {
 
 button {
   position: absolute;
-  bottom: clamp(10%, 15%, 20%);
+  bottom: clamp(10%, 10%, 10%);
   left: 50%;
   transform: translateX(-50%);
   padding: clamp(0.8em, 1em, 1.2em) clamp(1.5em, 2em, 2.5em);
@@ -172,4 +173,20 @@ button:hover {
 
 .rectangle, .center-square, .panel {
   transition: all 0.5s ease;
+}
+
+canvas {
+  height: 100vh;
+  z-index: -1000;
+  position: fixed;
+  top: 0px;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* base layer */
 }
