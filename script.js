@@ -15,6 +15,8 @@ const panels = {
 button.addEventListener('click', () => {
     button.style.display = 'none';
     document.querySelector('.background-container').classList.add('active');
+
+    showPanel('aboutme');
 });
 
 // Generic panel switcher
