@@ -1,95 +1,106 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
+/* hide scrollbars but keep scroll */
+body::-webkit-scrollbar { display: none; }
+body { scrollbar-width: none; -ms-overflow-style: none; }
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  color: white;
-  z-index: -9999;
+  color: #fff;
 }
 
-/* Fullscreen background */
+/* fixed backdrop */
 .background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed; inset: 0;
   background: linear-gradient(135deg, #1a1a1a, #2b2b2b, #3c3c3c, #2e2e2e);
-  z-index: -1; /* sits behind everything */
+  z-index: -1;
 }
 
-/* Center all content */
+/* hero */
 .content {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
   text-align: center;
 }
 
-/* Profile */
+/* profile */
 .pfp {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
+  width: 180px; height: 180px; border-radius: 50%;
+  object-fit: cover; margin-bottom: 1rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
-
 .portfolio-title {
-  font-weight: 700;
-  font-size: 1.8rem;
+  font-weight: 700; font-size: 1.9rem;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
   margin-bottom: 2rem;
 }
 
+/* buttons */
 .panels-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 80%;
-  max-width: 1000px; /* scale cap but still big */
+  display: flex; flex-direction: column;
+  gap: 1.5rem; width: 90%; max-width: 1200px;
 }
-
 .panel {
-  flex: 1;
-  padding: 2rem; /* bigger hit area */
-  border-radius: 16px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  font-weight: 700;
-  font-size: clamp(1rem, 2vw, 1.5rem); /* scales with screen */
+  flex: 1; padding: 2rem; border-radius: 16px; cursor: pointer;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+  font-weight: 700; font-size: clamp(1rem, 2vw, 1.3rem);
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  transition: transform 0.2s, filter 0.2s;
-
-  -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
-  user-select: none; /* prevent text selection */
+  transition: transform .2s, filter .2s;
+  -webkit-tap-highlight-color: transparent; user-select: none; color: #fff;
+  min-height: 40px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
 }
-
-.panel:hover {
-  transform: scale(1.05);
-  filter: brightness(1.15);
-}
-
+.panel:hover { transform: scale(1.05); filter: brightness(1.15); }
 .aboutme { background-image: url('assets/buttonbg/a.png'); }
 .projects { background-image: url('assets/buttonbg/b.png'); }
 .contact  { background-image: url('assets/buttonbg/c.png'); }
 
-/* Desktop */
-@media (min-width: 768px) {
-  .panels-container {
-    flex-direction: row;
-    gap: 2rem;
-    width: 80%;       /* panels stretch with screen */
-  }
+/* content area (below hero) */
+.content-sections {
+  width: 95%; max-width: 1200px;
+  margin: 2.5rem auto 2rem;
+  display: flex; flex-direction: column; gap: 2rem; /* mobile default: stacked */
+}
+.content-box {
+  background: rgba(0,0,0,0.9);
+  border-radius: 14px; padding: 2.5rem;
+  height: 600px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  font-size: 1.1rem; line-height: 1.7; text-align: left;
+}
 
-  .panel {
-    padding: 3rem;    /* larger buttons on desktop */
+/* footer */
+.footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8); /* jet black */
+  color: lightgray; text-align: center;
+  padding: 1rem 0; font-size: .95rem; font-weight: 600;
+  min-height: 80px; display: flex; align-items: center; justify-content: center;
+}
+
+/* ------- DESKTOP BEHAVIOR ------- */
+@media (min-width: 768px) {
+  /* buttons row */
+  .panels-container { flex-direction: row; gap: 2rem; width: 80%; }
+  .panel { padding: 2.5rem; min-height: 160px; }
+
+  /* card switcher: only one visible */
+  .content-sections { display: block; }       /* back to normal block container */
+  .content-box { display: none; }             /* hide by default */
+  .content-box.active { display: block; }     /* show selected card */
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 767px) {
+  .content-box {
+    width: 80vw;          /* almost full width */
+    height: 80vh;         /* almost full height */
+    margin: 5vh auto;     /* center with slight top/bottom margins */
+    border-radius: 1rem;
+    overflow-y: auto;     /* scroll if content overflows */
   }
 }
