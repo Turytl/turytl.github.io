@@ -50,7 +50,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 90%;
+  width: 80%;
   max-width: 1000px; /* scale cap but still big */
 }
 
