@@ -9,10 +9,4 @@ Current Link Index:-
 
 https://turytl.github.io/index.html (current-design)
 
-https://turytl.github.io/basic-portfolio/index.html
-
-https://turytl.github.io/scroll-style-design/index.html
-
-https://turytl.github.io/misc/test.html
-
 - Rehan
