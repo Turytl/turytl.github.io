@@ -32,7 +32,7 @@ body {
     #0099ff,
     #9900ff
   );
-  filter: grayscale(0.5);
+  filter: grayscale(0.8);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   z-index: -999;
@@ -50,14 +50,15 @@ body {
   }
 }
 
-.top-bar {
+.buttons {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
+  top: 600px;
+  left: 30%;
+  width: 40%;
+  height: 10%;
   flex-shrink: 0;
-  background: black;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,28 +79,17 @@ body {
 }
 
 .menu-button:hover {
-  background: #222;
   transform: scale(1.05);
 }
 
 .hero {
-  margin-top: 80px; /* height of top-bar */
+  margin-top: 150px; /* height of top-bar */
   min-height: 400px; /* adjust for reasonable space */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.bottom {
-  position: relative;
-  min-height: 1000px; /* enough content to scroll */
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .pfp {
@@ -117,22 +107,4 @@ body {
   color: #fff;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   margin-bottom: 32px;
-}
-
-.aboutme-text {
-  position: absolute; /* relative to .bottom */
-  top: 200px;
-  left: 20px;
-  max-width: 400px;
-  opacity: 0;
-  transform: translateY(200px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  color: #fff;
-  font-size: 1.2rem;
-  z-index: 999999;
-}
-
-.aboutme-text.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
