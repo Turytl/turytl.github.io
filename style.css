@@ -228,7 +228,6 @@ section {
 }
 .project-card img {
   width: 100%;
-  filter: grayscale(100%);
   border-radius: 12px;
   transition: filter 0.5s ease, transform 0.5s ease;
 }
@@ -304,3 +303,14 @@ section {
   50% { text-shadow: 0 0 15px #fff; }
   100% { text-shadow: 0 0 5px #fff; }
 }
+
+/* ============================
+   MISC
+============================ */
+
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
