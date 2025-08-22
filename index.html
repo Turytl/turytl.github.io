@@ -3,30 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rehan Bharwani</title>
+    <title>Javed Bharwani | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
-    <meta property="og:title" content="Rehan's Portfolio" />
+    <meta property="og:title" content="Javed's Portfolio" />
     <meta property="og:description" content="Check out my projects and work." />
     <meta
       property="og:image"
       content="https://turytl.github.io/assets/ogimage.png"
     />
   </head>
-
   <body>
     <div id="background"></div>
 
-    <div class="hero">
-      <img src="assets/pfp.png" class="pfp" />
-      <h1 class="portfolio-title">Rehan Bharwani - Portfolio</h1>
-    </div>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
 
-    <div class="buttons">
-      <div class="menu-button">ABOUT ME</div>
-      <div class="menu-button">PROJECTS</div>
-      <div class="menu-button">CONTACT</div>
-    </div>
+    <section class="hero">
+      <h1>Javed Bharwani</h1>
+      <p>Building simple, elegant solutions in code.</p>
+      <button class="cta" onclick="location.href='#about'">
+        Find Out More
+      </button>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hi, I’m Javed. I create clean, minimalist web designs and simple yet
+          elegant Python projects. I love experimenting with code, learning new
+          tech, and building things that are actually useful.
+        </p>
+      </div>
+      <div
+        class="about-image"
+        style="
+          background-image: url('assets/profile-picture.jpeg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      ></div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skill">
+        <span>Python</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 92%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>HTML & CSS</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 88%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 65%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>UI/UX Design</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 78%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2 style="text-align: center; color: white; margin-bottom: 2rem">
+        Projects
+      </h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="../assets/ogimage.png" alt="" />
+          <h3>Project 1</h3>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x200" alt="" />
+          <h3>Project 2</h3>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x200" alt="" />
+          <h3>Project 3</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p>
+          Email: <a href="mailto:rehanalyze@gmail.com">rehanalyze@gmail.com</a>
+        </p>
+        <p>
+          GitHub: <a href="https://github.com/Turytl" target="_blank">Turytl</a>
+        </p>
+        <p>Discord: EvoIdk</p>
+        <p>Phone: <a href="tel:9518787752">9518787752</a></p>
+      </div>
+      <a class="cta-button" href="mailto:rehanalyze@gmail.com">Say Hello</a>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>

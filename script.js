@@ -17,3 +17,7 @@ particlesJS("background", {
   interactivity: { detect_on: "window", events: { resize: true } },
   retina_detect: true,
 });
+
+document.querySelector('.cta').addEventListener('click', () => {
+  document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+});
