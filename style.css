@@ -314,3 +314,92 @@ section {
   display: block;
 }
 
+/* ============================
+   MOBILE CLAMP
+============================ */
+@media (max-width: 768px) {
+  /* Global adjustments */
+  * {
+    border-radius: 8px; /* slightly smaller for mobile */
+  }
+
+  body {
+    font-size: clamp(14px, 2vw, 16px);
+  }
+
+  /* NAVIGATION */
+  nav {
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  nav a {
+    padding: 0.25rem 0.5rem;
+    font-size: clamp(14px, 3vw, 16px);
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+  .hero p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  .hero .cta {
+    padding: 0.75rem 1.5rem;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .about-image {
+    width: clamp(120px, 30vw, 150px);
+    height: clamp(120px, 30vw, 150px);
+  }
+  .about-text h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  .about-text p {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+  }
+
+  /* SKILLS */
+  .skills h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  .skill span {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+  .skill-bar {
+    height: 16px;
+  }
+
+  /* PROJECTS */
+  .projects h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-align: center;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-card {
+    padding: 0.75rem;
+  }
+
+  /* CONTACT */
+  .contact h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  .contact-info p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+}
+
