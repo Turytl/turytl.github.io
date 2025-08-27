@@ -356,7 +356,7 @@ section {
     gap: 1.5rem;
   }
   .about-image {
-    width: clamp(120px, 30vw, 150px);
+    /* width: clamp(120px, 30vw, 150px); */
     height: clamp(120px, 30vw, 150px);
   }
   .about-text h2 {
