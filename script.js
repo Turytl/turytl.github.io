@@ -1,6 +1,6 @@
 particlesJS("background", {
   particles: {
-    number: { value: 150, density: { enable: true, value_area: 800 } },
+    number: { value: 75, density: { enable: true, value_area: 800 } },
     color: { value: "#ffffff" },
     shape: { type: "circle" },
     opacity: { value: 1, random: true },
